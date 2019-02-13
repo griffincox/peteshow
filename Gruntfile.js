@@ -78,6 +78,13 @@ module.exports = function(grunt) {
         }
       }
     },
+
+    watch: {
+      scripts: {
+        files: ['src/*.js', 'src/*.css'],
+        tasks: ['concat', 'uglify', 'cssmin', 'copy']
+      }
+    }
     // not working
     // qunit: {
     //   all: ['tests/index.html']

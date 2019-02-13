@@ -102,7 +102,7 @@ Name                  |  Description
 `npm install -g grunt-cli`
 `npm install` when in project directory
 
-Make your changes ONLY in the `src` directory. Then run `grunt` to process your changes into `lib` and `dist`.
+Make your changes ONLY in the `src` directory. Then run `grunt watch` to process your changes into `lib` and `dist` automagically.
 
 ### Further notes
 [![enova](https://www.enova.com/wp-content/uploads/2018/12/enova-logo.svg)](http://www.enova.com)
