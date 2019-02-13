@@ -234,8 +234,12 @@
     return this.filter(function() {
       var element = this, ignored = false
 
+      if($(element).attr('name') == 'authenticity_token') {
+        ignored = true
+      }
+
       if(_options.visibleOnly == true) {
-        if($(element).css( "visibility", "hidden" ) == false && $(element).is(':visible') == false) ignored = true
+        if($(element).is(':visible') == false) ignored = true
       }
 
       $.each(_options.ignore, function(i,v) {
@@ -247,9 +251,12 @@
   }
 
   Peteshow.submitForm = function() {
-    $(_options.form).submit()
-    $('form[name*=registration], .simple_form').submit()
-    $('form').last().submit()
+    if ($(_options.form) != '' && $($(_options.form)).length != 0) {
+      $(_options.form).submit()
+    }
+    else {
+      $('form').last().submit()
+    }
   }
 
   Peteshow.fillOutFormsAndSubmit = function() {
