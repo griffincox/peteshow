@@ -7,26 +7,27 @@
     "forms",
     "inputs"
   ],
-  "homepage": "http://github.com/brousalis/peteshow/",
+  "homepage": "https://git.enova.com/brazil/peteshow",
   "author": {
     "name": "Pete Brousalis",
     "email": "brousapg@gmail.com",
     "url": "http://brousalis.com/"
   },
+  "contributors": [
+    {
+      "name": "Griffin Cox",
+      "email": "gcox@enova.com"
+    }
+  ],
   "main": "dist/peteshow.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/brousalis/peteshow"
+    "url": "https://git.enova.com/brazil/peteshow"
   },
   "bugs": {
-    "url": "https://github.com/brousalis/peteshow/issues"
+    "url": "https://git.enova.com/brazil/peteshow/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/brousalis/peteshow/blob/master/license.txt"
-    }
-  ],
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.0",

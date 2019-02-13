@@ -134,7 +134,7 @@
     reuseLocalStorage()
 
     // close peteshow
-    Peteshow.hide()
+    Peteshow.toggle()
 
     return specialResult;
   }
