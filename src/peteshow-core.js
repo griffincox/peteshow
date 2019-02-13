@@ -105,9 +105,9 @@
 
     $('input:checkbox').filterFields().each(checkCheckbox);
 
-    $('input:radio').each(randomRadioValue)
+    $('input:radio').filterFields().each(randomRadioValue)
 
-    $('select').each(randomSelectValue)
+    $('select').filterFields().each(randomSelectValue)
 
     // force rules (for hidden fields)
     $.each(_options.force, function(element,v) {
@@ -121,7 +121,6 @@
     // fill out fields with rules
     $.each(rules, function(element,v) {
       $(element)
-        .filter(':visible')
         .filterFields()
         .val($.isFunction(v) ? v() : v)
 
@@ -133,6 +132,9 @@
 
     // localstorage functionality
     reuseLocalStorage()
+
+    // close peteshow
+    Peteshow.hide()
 
     return specialResult;
   }
@@ -232,6 +234,10 @@
     return this.filter(function() {
       var element = this, ignored = false
 
+      if(_options.visibleOnly == true) {
+        if($(element).css( "visibility", "hidden" ) == false && $(element).is(':visible') == false) ignored = true
+      }
+
       $.each(_options.ignore, function(i,v) {
         if($(element).is(v)) ignored = true
       });
@@ -283,4 +289,3 @@
 
   $(document).keydown(handleKeypress)
 }(jQuery)
-

@@ -94,13 +94,22 @@ Name                  |  Description
 [ignore](https://github.com/brousalis/peteshow/wiki/Custom-plugins#ignore)     | An array of input IDs you wish to have fill out forms ignore
 [force](https://github.com/brousalis/peteshow/wiki/Custom-plugins#force)       | Similar to rules, but can be used for hidden inputs
 [filters](https://github.com/brousalis/peteshow/wiki/Custom-plugins#filter)    | Filters out options from select boxes
+[visibleOnly](https://github.com/brousalis/peteshow/wiki/Custom-plugins#filter)    | Filters out options from select boxes
 [reuse](https://github.com/brousalis/peteshow/wiki/Custom-plugins#reuse)       | Define input selectors to be saved and reused on certain URLs
 [events](https://github.com/brousalis/peteshow/wiki/Custom-plugins#events)     | Used in the off chance you need to add extra javascript on Peteshow's init
 
-### Further notes
-[![enova](https://www.enova.com/wp-content/uploads/2014/01/Enova-logo.jpg)](http://www.enova.com)
+## Development
+`npm install -g grunt-cli`
+`npm install` when in project directory
 
-Developed by [Pete Brousalis](http://twitter.com/brousalis) in his spare time for use at [Enova](http://www.enova.com/) in Chicago, IL.
+Make your changes ONLY in the `src` directory. Then run `grunt` to process your changes into `lib` and `dist`.
+
+### Further notes
+[![enova](https://www.enova.com/wp-content/uploads/2018/12/enova-logo.svg)](http://www.enova.com)
+
+Most recent maintainer: [Griffin Cox](gcox@enova.com) for the Brazil team at Enova.
+
+Originally developed by [Pete Brousalis](http://twitter.com/brousalis) in his spare time for use at [Enova](http://www.enova.com/) in Chicago, IL.
 
 Special thanks to Matthew Bergman & Marak Squires for [Faker.js](http://github.com/marak/Faker.js/), Adam Gschwender for [jquery.formatDateTime](https://github.com/agschwender/jquery.formatDateTime), Klaus Hartl for [jquery.cookie](https://github.com/carhartl/jquery-cookie), all used by Peteshow.
 
