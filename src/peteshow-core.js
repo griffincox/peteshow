@@ -105,9 +105,9 @@
 
     $('input:checkbox').filterFields().each(checkCheckbox);
 
-    $('input:radio').each(randomRadioValue)
+    $('input:radio').filterFields().each(randomRadioValue)
 
-    $('select').each(randomSelectValue)
+    $('select').filterFields().each(randomSelectValue)
 
     // force rules (for hidden fields)
     $.each(_options.force, function(element,v) {
