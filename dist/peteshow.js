@@ -1467,10 +1467,10 @@ window.Peteshow = Peteshow;
       if($(element).attr('name') == 'authenticity_token') {
         ignored = true
       }
-      //
-      // if(_options.visibleOnly == true) {
-      //   if($(element).is(':visible') == false) ignored = true
-      // }
+
+      if(_options.visibleOnly == true) {
+        if($(element).is(':visible') == false) ignored = true
+      }
 
       $.each(_options.ignore, function(i,v) {
         if($(element).is(v)) ignored = true
@@ -1481,7 +1481,7 @@ window.Peteshow = Peteshow;
   }
 
   Peteshow.submitForm = function() {
-    if (_options.form != '' && $(_options.form + " form").length != 0) {
+    if (_options.form != '' && $(_options.form).length != 0) {
       $(_options.form).submit()
     }
     else {
